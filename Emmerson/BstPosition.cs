@@ -15,8 +15,8 @@
         public Artickel GetArtickel() {
             return artickel;    
         }
-        public void PrintPosition() {
-            Console.WriteLine("Position: " + artickel.GetName() + " Menge: " + menge + " Preis: " + artickel.GetPreis() * menge);
+        public void PrintPosition() {          
+            Console.WriteLine(artickel.GetName() + " Menge: " + menge + " Preis pro Artickel: " + artickel.GetPreis()+" Gesamtpreis: "+ artickel.GetPreis() * menge);
         }
     }
 }

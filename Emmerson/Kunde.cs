@@ -27,6 +27,17 @@ namespace Emmerson {
         public void AddArtickel(Artickel artickel, int menge) {
             bestellung.Addartickel(artickel, menge);
         }
-        public void RemoveArtickel
+        public void RemoveArtickel(Artickel artickel)
+        {
+            bestellung.RemoveArtickel(artickel);
+        }
+        public void PrintArtickel()
+        {
+            bestellung.PrintBestellung();
+        }
+        public void ChangeMenge(Artickel artickel, int menge)
+        {
+            bestellung.ChangeMenge(artickel, menge);
+        }
     }
 }

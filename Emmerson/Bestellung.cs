@@ -21,8 +21,24 @@
             bstPositionen.Remove(this.SucheArtickel(artickel));
         }
         public void PrintBestellung() {
+            double gesamtpreis = 0;
+            int position = 1;
             foreach (BstPosition item in bstPositionen) {
+                Console.Write("Position " + position + ": "); 
                 item.PrintPosition();
+                gesamtpreis = gesamtpreis + item.GetArtickel().GetPreis() * item.GetMenge();
+                position++;
+            }
+            Console.WriteLine("Total: "+gesamtpreis);
+        }
+        public void ChangeMenge(Artickel artickel, int menge)
+        {
+            foreach (BstPosition item in bstPositionen)
+            {
+                if(item.GetArtickel() == artickel)
+                {
+                    item.ChangeMenge(menge);
+                }
             }
         }
     }
